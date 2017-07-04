@@ -4,7 +4,7 @@
 ```groovy
 dependencies {
     ...
-    compile 'sing.butterknife:library:1.0.1'
+    compile 'sing.butterknife:library:1.0.3'
 }
 ```
 ## Maven:
@@ -12,9 +12,29 @@ dependencies {
 <dependency>
 　　<groupId>sing.butterknife</groupId>
 　　<artifactId>library</artifactId>
-　　<version>1.0.1</version>
+　　<version>1.0.3</version>
 　　<type>pom</type>
 </dependency>
+```
+## 使用
+在Activity中
+```JAVA
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    ButterKnife.bind(this);
+}
+```
+在Fragment中
+```JAVA
+@Override
+public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    view = LayoutInflater.from(getContext()).inflate(R.layout.view,null);
+    ButterKnife.bind(this,view);
+    return view;
+}
 ```
 自定义的 ButterKnife，目前只支持 绑定控件(BindView)和点击事件(OnClick)。
 ### 利用反射绑定 View
