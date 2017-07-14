@@ -4,7 +4,7 @@
 ```groovy
 dependencies {
     ...
-    compile 'sing.butterknife:library:1.0.3'
+    compile 'sing.butterknife:library:1.0.4'
 }
 ```
 ## Maven:
@@ -12,7 +12,7 @@ dependencies {
 <dependency>
 　　<groupId>sing.butterknife</groupId>
 　　<artifactId>library</artifactId>
-　　<version>1.0.3</version>
+　　<version>1.0.4</version>
 　　<type>pom</type>
 </dependency>
 ```
